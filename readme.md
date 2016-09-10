@@ -7,19 +7,15 @@ A tiny React single page app that can be used to monitor Zabbix web scenarios fr
 
 ![Screenshot 1](/assets/screenshot-1.png)
 
-## Building and running the Docker image
+## Running the Docker image
 
-This is the easiest way to run the node app. Just build the image:
-
-```
-docker build -t anttiviljami/zabbix-web-monitoring-screen .
-```
-
-... and run the app on your desired port.
+This is the easiest way to run the node app. Simply run the anttiviljami/zabbix-web-monitoring-screen:latest docker image with your settings
 
 ```
-docker run -e NODE_ENV=production -e ZABBIX_URL=https://zabbix.example.com -e ZABBIX_USER=swd -e ZABBIX_PASS=xxx -e ZABBIX_HOST=xxx -p <myport>:3001 -d anttiviljami/zabbix-web-monitoring-screen
+docker run -e ZABBIX_URL=https://zabbix.example.com -e ZABBIX_USER=<user> -e ZABBIX_PASS=<pass> -e ZABBIX_HOST=<hostid> -p 3001:3001 -d anttiviljami/zabbix-web-monitoring-screen
 ```
+
+You can now visit http://localhost:3001 to see the app running.
 
 ## Install
 
