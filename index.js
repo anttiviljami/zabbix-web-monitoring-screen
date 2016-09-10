@@ -1,7 +1,7 @@
 'use strict';
 
 // load the .env file
-require('dotenv').load();
+require('dotenv').config({silent: true});
 
 var fs = require('fs');
 var path = require('path');
