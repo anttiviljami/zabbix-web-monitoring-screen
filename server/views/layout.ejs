@@ -1,0 +1,17 @@
+<html>
+<head>
+  <title>Zabbix Web Monitoring</title>
+</head>
+  <body>
+
+  <div id="js-main"></div>
+
+  <%- body %>
+
+  <% if (env.production) { %>
+    <script async src="<%= env.assets.main.js %>"></script>
+  <% } else { %>
+    <script src="http://localhost:3000/client/main.js"></script>
+  <% } %>
+  </body>
+</html>

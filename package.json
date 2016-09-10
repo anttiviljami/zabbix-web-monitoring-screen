@@ -1,0 +1,89 @@
+{
+  "name": "zabbix-web-monitoring-screen",
+  "version": "1.0.0",
+  "description": "A tiny React single page app that can be used to monitor Zabbix web scenarios from a single screen.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "test": "jest",
+    "coverage": "jest --coverage",
+    "dist": "cross-env NODE_ENV=production webpack -p --progress",
+    "postinstall": "wpm install && npm run dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/anttiviljami/zabbix-web-monitoring-screen.git"
+  },
+  "engines": {
+    "node": "5",
+    "npm": "3"
+  },
+  "keywords": [
+    "react",
+    "webpack",
+    "boilerplate",
+    "production",
+    "sass",
+    "hot",
+    "reload"
+  ],
+  "author": "Antti Kuosmanen <antti@seravo.fi>",
+  "license": "MIT",
+  "homepage": "https://github.com/anttiviljami/zabbix-web-monitoring-screen",
+  "dependencies": {
+    "babel-polyfill": "6.3.14",
+    "babel-runtime": "6.3.19",
+    "compression": "1.6.1",
+    "cross-env": "1.0.7",
+    "dotenv": "2.0.0",
+    "ejs": "2.4.1",
+    "express": "4.13.4",
+    "express-ejs-layouts": "2.0.0",
+    "lodash": "4.15.0",
+    "react": "0.14.6",
+    "react-dom": "0.14.6",
+    "webpack": "1.12.12",
+    "webmodules": "0.1.0",
+    "zabbix-node": "0.2.0"
+  },
+  "devDependencies": {
+    "assets-webpack-plugin": "3.2.0",
+    "autoprefixer-loader": "3.2.0",
+    "babel-core": "6.4.5",
+    "babel-jest": "6.0.1",
+    "babel-loader": "6.2.1",
+    "babel-plugin-transform-runtime": "6.4.3",
+    "babel-preset-es2015": "6.3.13",
+    "babel-preset-react": "6.3.13",
+    "babel-preset-stage-0": "6.3.13",
+    "coveralls": "2.11.6",
+    "css-loader": "0.23.1",
+    "jest-cli": "0.8.2",
+    "node-sass": "3.4.2",
+    "react-addons-test-utils": "0.14.6",
+    "react-hot-loader": "1.3.0",
+    "sass-loader": "3.1.2",
+    "style-loader": "0.13.0",
+    "webpack-dev-server": "1.14.1"
+  },
+  "jest": {
+    "scriptPreprocessor": "<rootDir>/node_modules/babel-jest",
+    "unmockedModulePathPatterns": [
+      "<rootDir>/node_modules/react",
+      "<rootDir>/node_modules/react-dom",
+      "<rootDir>/node_modules/react-addons-test-utils",
+      "<rootDir>/node_modules/fbjs"
+    ],
+    "modulePathIgnorePatterns": [
+      "<rootDir>/node_modules/"
+    ],
+    "testFileExtensions": [
+      "test.js",
+      "test.jsx"
+    ],
+    "testDirectoryName": "client"
+  },
+  "browserDependencies": {
+    "jquery": "^3.1.0"
+  }
+}

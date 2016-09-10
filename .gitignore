@@ -1,0 +1,8 @@
+node_modules
+web_modules
+npm-debug.log
+.idea/
+coverage/
+dist
+assets.json
+.env
